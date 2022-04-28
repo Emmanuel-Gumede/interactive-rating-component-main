@@ -1,0 +1,109 @@
+@use "breakpoints" as *;
+@use "colors" as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 375px;
+}
+
+.rate-us-wrapper {
+    display: block;
+    background-color: $neutral_very_dark_blue;
+    color: $neutral_white;
+    padding: 40px;
+    border-radius: 20px;
+
+    .icon-star {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: $neutral_dark_blue;
+        border-radius: 50%;
+    }
+
+    .ratings {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0;
+        transition: 0.3s ease-in-out;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            background-color: $neutral_dark_blue;
+            border-radius: 50%;
+        }
+
+        div:hover {
+            background-color: $primary_orange;
+            transition: 0.3s ease-in-out;
+        }
+
+        div:focus {
+            background-color: $neutral_medium_grey;
+        }
+    }
+
+    .submit-btn {
+        width: 100%;
+        height: 45px;
+        background-color: $primary_orange;
+        color: $neutral_white;
+        text-transform: uppercase;
+        font-family: inherit;
+        letter-spacing: 6px;
+        cursor: pointer;
+        margin: 10px 0;
+        border: none;
+        border-radius: 40px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+        background-color: $neutral_white;
+        color: $primary_orange;
+        transition: 0.3s ease-in-out;
+    }
+
+};
+
+.thank-you-wrapper {
+    display: none;
+    background-color: $neutral_very_dark_blue;
+    color: $neutral_white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    .rate-feedback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 30px;
+        background-color: $neutral_dark_blue;
+        margin: 20px auto;
+        border-radius: 20px;
+
+        p {
+            color: $primary_orange;
+        }
+    }
+}
+
